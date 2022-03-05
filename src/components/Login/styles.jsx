@@ -19,7 +19,7 @@ justify-content : center;
 align-items : center;
 `;
 
-export const LoginButton = styled.button`
+export const LoginButton = styled.a`
    padding: 10px 20px;
    border-radius: 50px;
    border: none;
@@ -28,4 +28,5 @@ export const LoginButton = styled.button`
    color: ${({theme}) => theme.palette.light};
    cursor: pointer;
    text-transform: uppercase;
+   
 `
