@@ -10,7 +10,8 @@ const theme = {
     scale: {
         h1: "3rem",
         h2: "2.5rem",
-        h3: "1.5rem"
+        h3: "1.5rem",
+        default: "1rem"
     }
 }
 

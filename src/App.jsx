@@ -1,13 +1,18 @@
+import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./theme/global"
 import theme from "./theme/theme"
-import LoginRegister from "./components/LoginRegister/LoginRegister";
+import Login from "./components/Login/Login";
 
 
 function App() {
   return (
     <div className="App">
      <GlobalStyle />
-     <LoginRegister />
+     
+     <ThemeProvider theme={theme}>
+        <Login />
+     </ThemeProvider>
+   
     </div>
   );
 }
