@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import * as S from "./styles";
 
 
 export default function Login() {
@@ -27,16 +26,16 @@ export default function Login() {
 
   return (
     <div>
-      <S.LoginContainer>
+      <div className="loginContainer">
       
-        <S.LoginCLeft>
-          <S.Title>Welcome<br /> to Musify!</S.Title>
-          <S.LoginButton href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Musify</S.LoginButton>
-        </S.LoginCLeft>
+        <div className="loginContainer__left">
+          <h1 className="loginContainer__title">Welcome<br /> to Musify!</h1>
+          <a className="loginContainer__anchor" href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Musify</a>
+        </div>
 
-        <S.LoginCRight></S.LoginCRight>
+        <div className="loginContainer__right"></div>
 
-      </S.LoginContainer>
+      </div>
     </div>
   );
 }

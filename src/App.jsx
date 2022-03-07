@@ -1,6 +1,4 @@
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./theme/global"
-import theme from "./theme/theme"
+import "./styles/main.scss";
 import Login from "./components/Login/Login";
 
 
@@ -9,12 +7,9 @@ function App() {
 
   return (
     <div className="App">
-     <GlobalStyle />
-     
-     <ThemeProvider theme={theme}>
+  
         <Login />
-     </ThemeProvider>
-   
+
     </div>
   );
 }
