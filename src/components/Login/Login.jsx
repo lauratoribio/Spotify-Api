@@ -8,7 +8,14 @@ export default function Login() {
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
   const RESPONSE_TYPE = "token"
 
-  // const [token, setToken] = useState("")
+  const loginURL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`
+
+  const handleLogin = () => {
+    window.location.replace(loginURL)
+  }
+
+  const [token, setToken] = useState("")
+  const [searchKey, setSearchKey] = useState("")
 
   useEffect(() => {
     const hash = window.location.hash
@@ -22,7 +29,27 @@ export default function Login() {
       window.localStorage.setItem("token", token)
     }
 
+    setToken(token)
+
   }, [])
+
+  const searchArtist = (e) => {
+    e.preventDefault()
+    fetch('https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg', {
+      method: 'GET', headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+      }
+  })
+      .then((response) => {
+          console.log(response.json().then(
+              (data) => { console.log(data) }
+          ));
+      });
+  }
+
+
 
   return (
     <div>
@@ -30,12 +57,15 @@ export default function Login() {
       
         <div className="loginContainer__left">
           <h1 className="loginContainer__title">Welcome<br /> to Musify!</h1>
-          <a className="loginContainer__anchor" href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login to Musify</a>
+          <button className="loginContainer__anchor" onClick={handleLogin}>Login to Musify</button>
         </div>
 
         <div className="loginContainer__right"></div>
-
       </div>
+      <form onSubmit={searchArtist}>
+        <input type="text" onChange={e => setSearchKey(e.target.value)}/>
+        <button type={"submit"}>Search</button>
+      </form>
     </div>
   );
 }
