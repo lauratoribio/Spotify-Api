@@ -8,7 +8,7 @@ export default function Login() {
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
   const RESPONSE_TYPE = "token"
 
-  const [token, setToken] = useState("")
+  // const [token, setToken] = useState("")
 
   useEffect(() => {
     const hash = window.location.hash
