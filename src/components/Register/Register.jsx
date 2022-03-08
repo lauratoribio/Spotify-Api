@@ -25,6 +25,7 @@ export default function Register() {
       setUser(newUser)
   }
 
+
   return (
     <div>
       <div>
