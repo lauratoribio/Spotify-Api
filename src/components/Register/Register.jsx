@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import image from "../../assets/images/login.png"
 
 export default function Register() {
 
@@ -71,7 +72,7 @@ export default function Register() {
           </div>
 
           <div className="loginContainer__right">
-              <img src="login.png" alt="Dancing man"/>
+              <img src={image} alt="Dancing man"/>
           </div>
         </div>
       </div>

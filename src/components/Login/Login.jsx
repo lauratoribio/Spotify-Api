@@ -49,16 +49,6 @@ export default function Login() {
   //     });
   // }
 
-  fetch("https://spotfiy-charts.p.rapidapi.com/?type=viral&country=es&recurrence=weekly&date=latest", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "spotfiy-charts.p.rapidapi.com",
-      "x-rapidapi-key": "8d818ba2a7mshfa41f3c72cdb164p13af82jsn060e7f39ea52"
-    }
-  })
-  .then(response => response.json())
-  .then(data => console.log(data))
-
 
 
   return (
