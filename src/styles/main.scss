@@ -1,9 +1,12 @@
 @import "./variables";
 
 @import "../components/NavBar/navBar";
-@import "../components/Login/login";
-@import "../components/Register/register";
-
+@import "../pages/Login/login";
+@import "../pages/RegisterReducer/register";
+@import "../components/Footer/footer";
+@import "../pages/RegisterForm/registerForm";
+@import "../pages/Home/home";
+@import "../pages/Song/song";
 
 
 *{

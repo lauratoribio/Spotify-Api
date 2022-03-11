@@ -1,0 +1,36 @@
+.song {
+    align-items: left;
+    display: flex;
+    width: 100%;
+    background-color: $dark;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    &__image {
+        max-height: 110px;
+        width: auto;
+    }
+
+    &__info {
+        margin-left: 20px;
+        &__artist {
+          color: $secondary;
+        }
+        &__genre {
+          color: $light;
+        }
+        &__button {
+            margin-top: 12px;
+            padding: 5px 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: $default;
+            background-color: $light;
+            color: $primary;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}
