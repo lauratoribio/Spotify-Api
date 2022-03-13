@@ -5,8 +5,10 @@ import { registration } from "../../data/registration";
 import image from "../../assets/images/login.png";
 import Home from "../Home/Home";
 
+import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider";
 
 export default function Register(props) {
+
    const [userName, setUserName] = useState("")
    const [userEmail, setUserEmail] = useState("")
    const [userPassword, setUserPassword] = useState("")
@@ -24,7 +26,13 @@ export default function Register(props) {
       //debugger
       dispatch({ type: "error" });
     }
-  };
+  }
+
+  const darkTheme = useDarkTheme();
+
+  const darkStyle = {
+    color: darkTheme ?  "#FFFFFF" : "#141414"
+  }
 
 
   return (
@@ -34,7 +42,7 @@ export default function Register(props) {
      ) : (
       <div className="loginContainer">
           <div className="loginContainer__left">
-            <h1 className="loginContainer__title">
+            <h1 className="loginContainer__title" style={darkStyle}>
               Welcome
               <br /> to Musify!
             </h1>

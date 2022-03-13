@@ -13,7 +13,8 @@ export default function NavBar() {
   const toggleTheme = useUpdateDarkTheme()
 
   const theme = {
-    backgroundColor: darkTheme ?  "#141414" : "#FFFFFF"
+    backgroundColor: darkTheme ?  "#141414" : "#b892ff",
+    borderBottom: darkTheme && "solid 1px #FFFFFF"
   }
 
   return (
@@ -28,7 +29,7 @@ export default function NavBar() {
                 )}
               </div>
              <input type="checkbox" name="" className="nav-bar__checkBtn" />
-           <ol className="nav-bar__links">    
+           <ol className="nav-bar__links" style={theme}>    
         
                   <li className="nav-bar__links__item">Account</li>
           

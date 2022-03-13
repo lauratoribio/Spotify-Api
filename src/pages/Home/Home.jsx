@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Song from '../Song/Song'
 import { useUpdateUser, useUser } from "../../components/UserProvider"
 
+import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider";
+
+
 
 export default function Home(props) {
 
@@ -53,13 +56,20 @@ export default function Home(props) {
     .then(data => data.json())
     .then(data => setArtist5(data.artists))
   }, [])
+
+  const darkTheme = useDarkTheme();
+
+  const darkStyle = {
+    color: darkTheme ?  "#FFFFFF" : "#141414",
+  }
+
   
   return (
     <>
-    <div className="home-container">
-    <h1>Welcome {userDetails.userName}</h1>
-    <h1>Tus artistas más escuchados:</h1>
-      <div className="home-container__song">
+    <div className="home-container" style={darkStyle}>
+     <h1>Welcome {userDetails.userName}</h1>
+     <h1>Tus artistas más escuchados:</h1>
+       <div className="home-container__song">
       {artist1.map((song) => {
          return (
            <Song key={song.idArtist} song={song}/>
@@ -84,8 +94,8 @@ export default function Home(props) {
          return (
            <Song key={song.idArtist} song={song}/>
          )
-       })}
-    </div>
+        })}
+     </div>
     </div> 
     </>
   )
