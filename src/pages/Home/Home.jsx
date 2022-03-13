@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import Song from '../Song/Song'
+import { useUpdateUser, useUser } from "../../components/UserProvider"
 
 
-export default function Home() {
+export default function Home(props) {
+
+  //Llamada al contexto para obtener los datos del usuario registrados
+
+  const dispatch = useUpdateUser()
+  const userDetails = useUser()
+
+  //Llamada a la API para obetener los datos del artista
 
   const [artist1, setArtist1] = useState([])
 
@@ -49,6 +57,7 @@ export default function Home() {
   return (
     <>
     <div className="home-container">
+    <h1>Welcome {userDetails.userName}</h1>
     <h1>Tus artistas más escuchados:</h1>
       <div className="home-container__song">
       {artist1.map((song) => {

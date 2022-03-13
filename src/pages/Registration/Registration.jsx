@@ -12,16 +12,14 @@ export default function Register(props) {
    const [userPassword, setUserPassword] = useState("")
    const dispatch = useUpdateUser()
    let navigate = useNavigate();
-   const { loading, isLoggedIn, errorMessage } = useUser()
+   const { isLoggedIn, errorMessage } = useUser()
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    dispatch({ type: "login" });
-
     try {
-      await registration({ userName, userEmail, userPassword });
-      dispatch({ type: "success" });
+      await registration(dispatch, { userName, userEmail, userPassword });
+
     } catch (error) {
       //debugger
       dispatch({ type: "error" });

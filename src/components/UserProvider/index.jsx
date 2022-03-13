@@ -1,4 +1,3 @@
-import { UserProvider, useUpdateUser, useUser } from "./UserProvider";
-import { initialState, AuthReducer } from "./reducer";
+import { UserContextProvider, useUpdateUser, useUser } from "./UserProvider";
 
-export { UserProvider, useUpdateUser, useUser, initialState, AuthReducer }
+export { UserContextProvider, useUpdateUser, useUser };

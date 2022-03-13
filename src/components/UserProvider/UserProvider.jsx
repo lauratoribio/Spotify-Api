@@ -13,7 +13,7 @@ export const useUpdateUser = () => {
 }
 
 
-export default function UserProvider({ children }) {
+export function UserContextProvider({ children }) {
 
   const [user, dispatch] = useReducer(AuthReducer, initialState)
 

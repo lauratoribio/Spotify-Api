@@ -18,6 +18,12 @@ header {
         font-weight: bold;
     }
 
+    &__controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &__checkBtn {
         display: block;
         width: 20px;
