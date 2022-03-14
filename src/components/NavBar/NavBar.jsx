@@ -17,6 +17,11 @@ export default function NavBar() {
     borderBottom: darkTheme && "solid 1px #FFFFFF"
   }
 
+  const submenu = {
+    backgroundColor: darkTheme ?  "#141414" : "#e7c6ff",
+    borderBottom: darkTheme && "solid 1px #FFFFFF"
+  }
+
   return (
    <header style={theme}>  
        <nav className="nav-bar">
@@ -29,7 +34,7 @@ export default function NavBar() {
                 )}
               </div>
              <input type="checkbox" name="" className="nav-bar__checkBtn" />
-           <ol className="nav-bar__links" style={theme}>    
+           <ol className="nav-bar__links" style={submenu}>    
         
                   <li className="nav-bar__links__item">Account</li>
           

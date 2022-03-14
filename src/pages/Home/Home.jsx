@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Song from '../Song/Song'
 import { useUpdateUser, useUser } from "../../components/UserProvider"
 
-import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider";
+import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider"
+
+import APIKit from "../../spotify"
 
 
 
@@ -62,6 +64,13 @@ export default function Home(props) {
   const darkStyle = {
     color: darkTheme ?  "#FFFFFF" : "#141414",
   }
+
+  //Conexion con spotify apiClient
+  const [playlists, setPlaylists] = useState(null)
+  
+  APIKit.get("me/playlists").then(function(response) {
+    setPlaylists(response.data.items)
+  })
 
   
   return (

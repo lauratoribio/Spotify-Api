@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
   
     &__left {
       display: flex;
@@ -55,6 +55,10 @@
 
     &__right {
       margin-bottom: -7px;
+
+      &__img {
+        max-height: 100vh;
+      }
     }
 
   }

@@ -84,7 +84,7 @@ export default function Register(props) {
           </div>
 
           <div className="loginContainer__right">
-            <img src={image} alt="Dancing man" />
+            <img className="loginContainer__right__img" src={image} alt="Dancing man" />
           </div>
         </div>
      )}
