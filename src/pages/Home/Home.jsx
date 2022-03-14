@@ -68,9 +68,12 @@ export default function Home(props) {
   //Conexion con spotify apiClient
   const [playlists, setPlaylists] = useState(null)
   
-  APIKit.get("me/playlists").then(function(response) {
-    setPlaylists(response.data.items)
-  })
+  useEffect(() => {
+    APIKit.get("me/playlists").then(function(response) {
+      setPlaylists(response.data.items)
+      console.log(response.data.items)
+    })
+  }, [])
 
   
   return (
@@ -78,7 +81,19 @@ export default function Home(props) {
     <div className="home-container" style={darkStyle}>
      <h1>Welcome {userDetails.userName}</h1>
      <h1>Tus artistas más escuchados:</h1>
-       <div className="home-container__song">
+       <div className="playlist-container">
+           {playlists?.map(playlist => 
+             <div className="playlist-container__box">
+                <img src={playlist.images[0].url}  className="playlist-container__img" alt="playlist-img"/>
+                <p className="playlist-container__title">{playlist.name}</p>
+                <p className="playlist-container__num">{playlist.tracks.total}</p>
+             </div>
+           )}
+       </div>
+
+
+
+       {/* <div className="home-container__song">
       {artist1.map((song) => {
          return (
            <Song key={song.idArtist} song={song}/>
@@ -104,7 +119,7 @@ export default function Home(props) {
            <Song key={song.idArtist} song={song}/>
          )
         })}
-     </div>
+     </div> */}
     </div> 
     </>
   )
