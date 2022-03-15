@@ -1,3 +1,8 @@
+.home-sideBar {
+  height: 900px;
+}
+
+
 .home-container {
   // justify-content: flex-start;
   // flex-direction: column;
@@ -5,9 +10,8 @@
   // min-height: 70vh;
   // padding: 10% 5% 5% 5%;
   // overflow-y: auto;
-  margin-left: 150px;
+  margin-left: 200px;
   min-height: 100vh;
-  padding: 3%;
 
   &__song {
     display: flex;
@@ -19,7 +23,6 @@
   }
 
   &__title {
-    margin-top: 5rem;
     font-size: $h1;
     text-align: left;
     margin-bottom: 30px;
@@ -44,13 +47,13 @@
 
   &__box {
     position: relative;
-    width: 200px;
+    width: 220px;
     height: 35%;
     background-color: $dark;
     border-radius: 20px;
     padding: 10px;
     margin: 1% 1% 1% 0;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     cursor: pointer;
   }
 
@@ -76,5 +79,41 @@
     width: 100%;
     aspect-ratio: 1;
     border-radius: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .home-container {
+    margin-left: 0px;
+    padding: 40px;
+
+    &__title {
+      visibility: hidden;
+    }
+  }
+
+  .playlist-container {
+    
+    &__box {
+      width: 28%;
+      margin: 5px;
+    }
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .home-container {
+    padding: 20px;
+  }
+
+  .playlist-container {
+    
+    &__box {
+      width: 40%;
+      margin: 5px;
+    }
   }
 }

@@ -20,9 +20,8 @@ export default function Register(props) {
     color: darkTheme ?  "#FFFFFF" : "#141414"
   }
 
-
   return (
-    <div>
+    <div className="container">
       <div className="loginContainer">
           <div className="loginContainer__left">
             <h1 className="loginContainer__title" style={darkStyle}>
@@ -87,25 +86,3 @@ export default function Register(props) {
   );
 }
 
-// const submitForm = (e) => {
-//  e.preventDefault();
-// }
-
-// // const [user, setUser] = useState({
-// //     userName: "",
-// //     userEmail: "",
-// //     userPhone: "",
-// //     userImage: "",
-// // })
-
-// // const { userName, userEmail, userPhone, userImage } = user
-
-// // const handleChange = (e) => {
-// //     const {name, value} = e.target
-
-// //     const newUser = {
-// //         ...user,
-// //         [name]: value
-// //     }
-// //     setUser(newUser)
-// // }
