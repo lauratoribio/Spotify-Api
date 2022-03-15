@@ -47,6 +47,7 @@ export default function Account() {
     <>
       <SideBar />
       <div className="account-container" style={darkStyle}>
+      {/* <h1>Your profile</h1> */}
         <div className="user-card" style={darkBg}>
           <img className="user-card__image" src={userDataImage} alt="" />
           <div className="user-card__details">

@@ -47,7 +47,7 @@ export default function Home(props) {
       <SideBar />
       <div className="home-container" style={darkStyle}>
        <h1 className="home-container__title">Welcome {userDetails.userName}!</h1>
-       <h2 className="home-container__titleSection">{userDetails.userName}'s Playlists:</h2>
+       <h2 className="home-container__titleSection">{userDetails.userName} Playlists:</h2>
        <div className="playlist-container">
            {playlists?.map(playlist => 
              <div className="playlist-container__box" style={darkBg} key={playlist.id}>

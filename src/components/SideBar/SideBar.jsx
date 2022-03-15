@@ -41,9 +41,7 @@ export default function SideBar() {
           <div className="btn-body">
               <p className="btn-title">Player</p>
           </div>
-          <div className="btn-body">
-              <p className="btn-title">Sign out</p>
-          </div>
+
 
         </div>
 
