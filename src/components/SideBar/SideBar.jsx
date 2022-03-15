@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import apiClient from '../../spotify'
 
 import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider";
-
+import { Link } from 'react-router-dom';
 
 
 export default function SideBar() {
@@ -23,11 +23,13 @@ export default function SideBar() {
 
   return (
     <div className="sidebar-container" style={darkStyle}>
-        <img 
+        <Link to="/account">
+          <img 
             className="profile-img"
             src={image}
             alt="profile"
-        />
+            />
+        </Link>
         <div>
           <div className="btn-body">
               <p className="btn-title">Feed</p>
