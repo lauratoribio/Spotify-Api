@@ -14,6 +14,11 @@ header {
     color: white;
     padding: 0px 20px;
 
+    a {
+      color: $light;
+      text-decoration: none;
+    }
+
     &__title {
         font-size: $h3;
         font-weight: bold;
@@ -75,6 +80,10 @@ header {
             height: 2px;
             background: $primary;
           }
+        
+      a {
+          text-decoration: none;
+      }
 
       &__item {
         margin-right: 30px;

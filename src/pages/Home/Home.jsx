@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Song from '../Song/Song'
 import { useUpdateUser, useUser } from "../../components/UserProvider"
 
 import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider"
@@ -19,7 +18,7 @@ export default function Home(props) {
   const darkTheme = useDarkTheme();
 
   const darkStyle = {
-    color: darkTheme ?  "#FFFFFF" : "#141414",
+    color: darkTheme ?  "#FFFFFF" : "#141414"
   }
 
   const darkBg = {
@@ -47,7 +46,8 @@ export default function Home(props) {
     <>
     <SideBar />
     <div className="home-container" style={darkStyle}>
-     <h1 className="home-container__title">{userDetails.userName} Playlists:</h1>
+     <h1 className="home-container__title">Welcome {userDetails.userName}!</h1>
+     <h2 className="home-container__titleSection">Playlists:</h2>
        <div className="playlist-container">
            {playlists?.map(playlist => 
              <div className="playlist-container__box" style={darkBg} key={playlist.id}>

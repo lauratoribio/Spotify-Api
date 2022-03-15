@@ -36,7 +36,7 @@ export default function SideBar() {
               <p className="btn-title">Library</p>
           </div>
           <div className="btn-body">
-              <p className="btn-title">trending</p>
+              <p className="btn-title">Trending</p>
           </div>
           <div className="btn-body">
               <p className="btn-title">Player</p>

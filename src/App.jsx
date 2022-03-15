@@ -6,16 +6,12 @@ import Registration from "./pages/Registration/Registration";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
 import { UserContextProvider } from "./components/UserProvider";
-import RegisterForm from "./pages/RegisterForm/RegisterForm";
 import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider"
 // import routes from "./Config/routes";
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { setClientToken } from './spotify';
 import Account from './pages/Account/Account';
-import SideBar from './components/SideBar/SideBar';
-
-
 
 function App() {
 
@@ -44,12 +40,10 @@ function App() {
       <ThemeProvider>
         <Router>
            <NavBar />
-           {/* <SideBar /> */}
            <Routes>
               <Route path="register" element={<Registration />} />
               <Route path="/" element={<Login />} />
               <Route path="home" element={<Home />} />
-              <Route path="registerform" element={<RegisterForm />} />
               <Route path="account" element={<Account />} />
            </Routes>
            <Footer />

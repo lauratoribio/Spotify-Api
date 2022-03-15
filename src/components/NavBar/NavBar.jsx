@@ -3,6 +3,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 
 import { useDarkTheme, useUpdateDarkTheme } from "../ThemeProvider/ThemeProvider"
+import { Link } from 'react-router-dom';
 
 // import { Link } from "react-router-dom";
 
@@ -25,7 +26,7 @@ export default function NavBar() {
   return (
    <header style={theme}>  
        <nav className="nav-bar">
-           <p className="nav-bar__title">Musify</p>
+           <Link to="/home"><p className="nav-bar__title">Musify</p></Link>
               <div onClick={toggleTheme}>
               {darkTheme ? (
                     <LightModeIcon fontSize='large' sx={{color:"white"}}/>
@@ -34,13 +35,13 @@ export default function NavBar() {
                 )}
               </div>
              <input type="checkbox" name="" className="nav-bar__checkBtn" />
-           <ol className="nav-bar__links" style={submenu}>    
-        
-                  <li className="nav-bar__links__item">Account</li>
-          
-        
-                  <li className="nav-bar__links__item">Log out</li>
-          
+             <ol className="nav-bar__links" style={submenu}>    
+                  <Link to="/account">
+                     <li className="nav-bar__links__item">Account</li>
+                  </Link>
+                  <Link to="/register">
+                    <li className="nav-bar__links__item">Log out</li>
+                  </Link>    
            </ol>
        </nav>
     </header> 
