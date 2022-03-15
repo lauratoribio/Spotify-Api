@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import apiClient from '../../spotify'
 
+import { useDarkTheme } from "../../components/ThemeProvider/ThemeProvider";
+
+
 
 export default function SideBar() {
 
@@ -12,8 +15,14 @@ export default function SideBar() {
     })
     }, [])
 
+    const darkTheme = useDarkTheme();
+
+    const darkStyle = {
+        borderRight: darkTheme && "solid 1px #FFFFFF"
+    }
+
   return (
-    <div className="sidebar-container">
+    <div className="sidebar-container" style={darkStyle}>
         <img 
             className="profile-img"
             src={image}

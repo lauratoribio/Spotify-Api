@@ -44,10 +44,10 @@ function App() {
       <ThemeProvider>
         <Router>
            <NavBar />
-           <SideBar />
+           {/* <SideBar /> */}
            <Routes>
-              <Route path="/" element={<Registration />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Registration />} />
+              <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
               <Route path="/registerform" element={<RegisterForm />} />
               <Route path="/account" element={<Account />} />

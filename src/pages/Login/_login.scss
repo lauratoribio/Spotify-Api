@@ -1,8 +1,9 @@
-.loginContainer {
+.login-Container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 95vh;
+  overflow-y: auto;
 
   &__left {
     display: flex;

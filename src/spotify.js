@@ -2,7 +2,7 @@ import axios from "axios"
 
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const clientId = "734edb19dbd14d6e9b3e6a92a9e6b917";
-const redirectUri = "http://localhost:3000";
+const redirectUri = "http://localhost:3000/register";
 const scopes = ["user-library-read", "playlist-read-private"];
 
 export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scopes=${scopes.join(
