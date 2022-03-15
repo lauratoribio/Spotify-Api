@@ -46,11 +46,11 @@ function App() {
            <NavBar />
            {/* <SideBar /> */}
            <Routes>
-              <Route path="/register" element={<Registration />} />
+              <Route path="register" element={<Registration />} />
               <Route path="/" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/registerform" element={<RegisterForm />} />
-              <Route path="/account" element={<Account />} />
+              <Route path="home" element={<Home />} />
+              <Route path="registerform" element={<RegisterForm />} />
+              <Route path="account" element={<Account />} />
            </Routes>
            <Footer />
         </Router>

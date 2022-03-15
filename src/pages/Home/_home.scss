@@ -49,7 +49,10 @@
 
   &__title {
     color: $light;
+    font-size: $default;
     box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   &__num {

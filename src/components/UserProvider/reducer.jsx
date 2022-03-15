@@ -8,8 +8,6 @@
     userName: "",
     userEmail: "",
     userPassword: "",
-    loading: false,
-    isLoggedIn: false,
     errorMessage: null
   };
   
@@ -19,10 +17,7 @@
           case "REQUEST_LOGIN":
               return {
                   ...state,
-                  userName: "",
-                  userEmail: "",
-                  userPassword: "",
-                  loading: true
+                  [action.fieldName]: action.payload
               };
           case "LOGIN_SUCCESS":
               return {
@@ -30,8 +25,6 @@
                   userName: "",
                   userEmail: "",
                   userPassword: "",
-                  loading: false,
-                  isLoggedIn: true
               };
           case "LOGOUT":
               return {
@@ -39,13 +32,10 @@
                   userName: "",
                   userEmail: "",
                   userPassword: "",
-                  isLoggedIn: false
               }    
           case "LOGIN_ERROR":
               return {
                   ...state,
-                  loading: false,
-                  isLoggedIn: false,
                   errorMessage: action.error
               }  
           default:

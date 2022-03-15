@@ -13,7 +13,6 @@ export default function Home(props) {
 
   //Llamada al contexto para obtener los datos del usuario registrados
 
-  const dispatch = useUpdateUser()
   const userDetails = useUser()
 
 
